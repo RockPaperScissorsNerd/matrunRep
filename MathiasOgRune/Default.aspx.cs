@@ -1,9 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace MathiasOgRune
 {
@@ -11,7 +16,68 @@ namespace MathiasOgRune
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            LabelTrue.Visible = false;
+            LabelFalse.Visible = false;
+        }
 
+        protected void ButtonLogin_Click(object sender, EventArgs e)
+        {
+            if (IsLoginTrue())
+            {
+                LabelTrue.Visible = true;
+            }
+            else
+            {
+                LabelFalse.Visible = true;
+            }
+        }
+
+        private bool IsLoginTrue()
+        {
+            var connectionString = ConfigurationManager.ConnectionStrings["connstr"].ConnectionString;
+            SqlParameter param;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("select * from Player where username=@username and password=@password", conn);
+                cmd.CommandType = CommandType.Text;
+
+                param = new SqlParameter("@password", SqlDbType.NVarChar);
+                using (SHA256 sha256Hash = SHA256.Create())
+                {
+                    param.Value = GetHash(sha256Hash, TextBoxPassword.Text);
+                }
+                cmd.Parameters.Add(param);
+                object geh = param.Value;
+                param = new SqlParameter("@userName", SqlDbType.NVarChar);
+                param.Value = TextBoxUsername.Text;
+
+                cmd.Parameters.Add(param);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    return true;
+                }
+
+                conn.Close();
+
+                return false;
+            }
+        }
+        private static string GetHash(HashAlgorithm hashAlgorithm, string input)
+        {
+            byte[] data = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            var sBuilder = new StringBuilder();
+
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+            return sBuilder.ToString();
         }
     }
 }
