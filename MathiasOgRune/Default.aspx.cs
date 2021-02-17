@@ -15,20 +15,34 @@ namespace MathiasOgRune
     public partial class Default : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-            LabelTrue.Visible = false;
-            LabelFalse.Visible = false;
+        { 
+
         }
 
         protected void ButtonLogin_Click(object sender, EventArgs e)
         {
-            if (IsLoginTrue())
+            int auth = 0;
+            if(TextBoxUsername.Text.Length < 1)
             {
-                LabelTrue.Visible = true;
+                nousernameentered.Visible = true;
+                auth = 1;
             }
-            else
+            if(TextBoxPassword.Text.Length < 1)
             {
-                LabelFalse.Visible = true;
+                nopasswordentered.Visible = true;
+                auth = 1;
+            }
+
+            if(auth == 0)
+            {
+                if (IsLoginTrue())
+                {
+                    //Login authorized
+                }
+                else
+                {
+                    //Login failed
+                }
             }
         }
 

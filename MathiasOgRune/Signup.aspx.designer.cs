@@ -11,7 +11,7 @@ namespace MathiasOgRune
 {
 
 
-    public partial class Default
+    public partial class Signup
     {
 
         /// <summary>
@@ -24,48 +24,30 @@ namespace MathiasOgRune
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// TextBoxUsername control.
+        /// TextBoxSignUpUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxUsername;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxSignUpUsername;
 
         /// <summary>
-        /// nousernameentered control.
+        /// TextBoxSignUpPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl nousernameentered;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxSignUpPassword;
 
         /// <summary>
-        /// TextBoxPassword control.
+        /// ButtonSignUp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxPassword;
-
-        /// <summary>
-        /// nopasswordentered control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl nopasswordentered;
-
-        /// <summary>
-        /// ButtonLogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonLogin;
+        protected global::System.Web.UI.WebControls.Button ButtonSignUp;
     }
 }

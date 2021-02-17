@@ -4,20 +4,26 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Log In</title>
+    <link rel="stylesheet" href="Style.css" />
 </head>
 <body>
-    <form id="form1" runat="server"> 
-        <div>
+    <form id="form1" runat="server">
+        <div id="login">
             <h2>Login Page</h2>
-            <div id="login">
-                <asp:TextBox ID="TextBoxUsername" runat="server" placeholder="username"></asp:TextBox>
-                <br />
-                <asp:TextBox ID="TextBoxPassword" runat="server" placeholder="password"></asp:TextBox>
-                <asp:Button ID="ButtonLogin" runat="server" Text="Continue" OnClick="ButtonLogin_Click" />
+            <asp:TextBox ID="TextBoxUsername" runat="server" placeholder="username" CssClass="inpu"></asp:TextBox>
+            <div id="nousernameentered" class="error" visible="false" runat="server">
+                <span>Enter a username.</span>
             </div>
-            <asp:Label ID="LabelTrue" runat="server" Text="Login succeded" Visible="false"></asp:Label>
-            <asp:Label ID="LabelFalse" runat="server" Text="Login Failed" Visible="false"></asp:Label>
+            <br />
+            <br />
+            <asp:TextBox ID="TextBoxPassword" runat="server" placeholder="password" CssClass="inpu"></asp:TextBox>
+            <div id="nopasswordentered" class="error" visible="false" runat="server">
+                    <p>Enter Password.</p>
+            </div>
+            <br />
+            <br />
+            <asp:Button ID="ButtonLogin" runat="server" Text="Continue" OnClick="ButtonLogin_Click" CssClass="butt" />
         </div>
     </form>
 </body>
