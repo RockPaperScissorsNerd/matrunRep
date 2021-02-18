@@ -33,6 +33,15 @@ namespace MathiasOgRune
         protected global::System.Web.UI.WebControls.TextBox TextBoxSignUpUsername;
 
         /// <summary>
+        /// signupnousernameentered control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl signupnousernameentered;
+
+        /// <summary>
         /// TextBoxSignUpPassword control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,33 @@ namespace MathiasOgRune
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxSignUpPassword;
+
+        /// <summary>
+        /// signupnopasswordentered control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl signupnopasswordentered;
+
+        /// <summary>
+        /// TextBoxSignUpPasswordRepeat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxSignUpPasswordRepeat;
+
+        /// <summary>
+        /// signupnorepeatentered control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl signupnorepeatentered;
 
         /// <summary>
         /// ButtonSignUp control.

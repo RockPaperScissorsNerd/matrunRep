@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div id="login">
-            <h2>Login Page</h2>
+            <h2 style="margin-bottom: 10px;">Login Page</h2>
             <asp:TextBox ID="TextBoxUsername" runat="server" placeholder="username" CssClass="inpu"></asp:TextBox>
             <div id="nousernameentered" class="error" visible="false" runat="server">
                 <span>Enter a username.</span>
@@ -19,12 +19,17 @@
             <br />
             <asp:TextBox ID="TextBoxPassword" runat="server" placeholder="password" CssClass="inpu"></asp:TextBox>
             <div id="nopasswordentered" class="error" visible="false" runat="server">
-                    <p>Enter Password.</p>
+                <span>Enter Password.</span>
+            </div>
+            <div id="invalidLogin" class="error" visible="false" runat="server">
+                <span>Wrong username or password.</span>
             </div>
             <br />
             <br />
             <asp:Button ID="ButtonLogin" runat="server" Text="Continue" OnClick="ButtonLogin_Click" CssClass="butt" />
+            <br />
         </div>
+        <a style="text-align: center;" href="Signup.aspx">Don't have an account? Make one!</a>
     </form>
 </body>
 </html>

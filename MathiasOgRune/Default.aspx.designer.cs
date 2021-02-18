@@ -60,6 +60,15 @@ namespace MathiasOgRune
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl nopasswordentered;
 
         /// <summary>
+        /// invalidLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl invalidLogin;
+
+        /// <summary>
         /// ButtonLogin control.
         /// </summary>
         /// <remarks>

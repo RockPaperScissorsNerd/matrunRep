@@ -22,19 +22,27 @@
     font-size: 20px;
 }
 
-#login {
+#login{
     padding: 15px;
     border: solid 2px #ddd;
     border-radius: 25px;
     text-align: center;
-    width: 30%;
 }
 
-.error {
-    border-radius: 10px;
-    border: solid 3px #FF2020;
-    padding: 10px;
-    background-color: #FFb2b2;
-    width: 200px;
+.error{
+    font-family: Verdana;
+    font-size: 15px;
+    color: red;
+    margin-top: 3px;
+}
+
+#register {
+    padding: 15px;
+    border: solid 2px #ddd;
+    border-radius: 25px;
+    text-align: center;
+}
+
+a{
     text-align: center;
 }

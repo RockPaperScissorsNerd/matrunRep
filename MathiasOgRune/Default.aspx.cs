@@ -15,8 +15,10 @@ namespace MathiasOgRune
     public partial class Default : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        { 
-
+        {
+            nousernameentered.Visible = false;
+            nopasswordentered.Visible = false;
+            invalidLogin.Visible = false;
         }
 
         protected void ButtonLogin_Click(object sender, EventArgs e)
@@ -37,11 +39,11 @@ namespace MathiasOgRune
             {
                 if (IsLoginTrue())
                 {
-                    //Login authorized
+                    Response.Redirect(Page.ResolveClientUrl("Homepage.aspx"));
                 }
                 else
                 {
-                    //Login failed
+                    invalidLogin.Visible = true;
                 }
             }
         }
