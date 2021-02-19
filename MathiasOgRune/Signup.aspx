@@ -9,8 +9,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="register">
-            <h2 style="margin-bottom: 10px;">Sign up</h2>
+        <div class="register">
+            <h2 style="margin-bottom: 15px;">Sign up</h2>
             <asp:TextBox ID="TextBoxSignUpUsername" placeholder="username" runat="server" CssClass="inpu"></asp:TextBox>
             <div id="signupnousernameentered" class="error" visible="false" runat="server">
                 <span>Enter a username</span>
