@@ -45,7 +45,7 @@ namespace MathiasOgRune
 
             if (auth == 0)
             {
-                //Register();
+                Register();
             }
         }
         private void Register()
@@ -54,10 +54,10 @@ namespace MathiasOgRune
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 //code
-                string ins = "Insert into [Registration](Name, Password) values(@name,@pass)";
+                string ins = "Insert into [Player](username, password) values(@name,@pass)";
                 //Her blir Navn og Passord lagt til i databasen.
 
-                string check = "select count(*) from [Registration] where Name = @user";
+                string check = "select count(*) from [Player] where username = @user";
                 using (SqlCommand comm = new SqlCommand(check, conn))
                 {
                     using (SqlCommand com = new SqlCommand(ins, conn))
@@ -77,7 +77,7 @@ namespace MathiasOgRune
                         {
                             com.ExecuteNonQuery();
                             conn.Close();
-                            Response.Redirect("LoginPage.aspx");
+                            Response.Redirect(Page.ResolveClientUrl("Default.aspx"));
                         }
                         else
                         {
