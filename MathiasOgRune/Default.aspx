@@ -12,7 +12,7 @@
         <div id="login">
             <h2 style="margin-bottom: 10px;">Login Page</h2>
             <asp:TextBox ID="TextBoxUsername" runat="server" placeholder="username" CssClass="inpu"></asp:TextBox>
-            <div id="nousernameentered" class="error" visible="false" runat="server">
+            <div id="nousernameentered" class="error" visible="false" runat="server"> 
                 <span>Enter a username.</span>
             </div>
             <br />

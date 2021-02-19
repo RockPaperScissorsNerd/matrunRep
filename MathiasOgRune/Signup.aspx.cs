@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography;
@@ -36,6 +37,11 @@ namespace MathiasOgRune
                 signupnorepeatentered.Visible = true;
                 auth = 1;
             }
+            if (TextBoxSignUpPasswordRepeat.Text != TextBoxSignUpPassword.Text)
+            {
+                
+                auth = 1;
+            }
 
             if (auth == 0)
             {
@@ -48,6 +54,38 @@ namespace MathiasOgRune
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 //code
+                string ins = "Insert into [Registration](Name, Password) values(@name,@pass)";
+                //Her blir Navn og Passord lagt til i databasen.
+
+                string check = "select count(*) from [Registration] where Name = @user";
+                using (SqlCommand comm = new SqlCommand(check, conn))
+                {
+                    using (SqlCommand com = new SqlCommand(ins, conn))
+                    {
+                        using (SHA256 sha256Hash = SHA256.Create())
+                        {
+                            //param.Value = GetHash(sha256Hash, TextBoxPassword.Text);
+                            com.Parameters.AddWithValue("@pass", GetHash(sha256Hash, TextBoxSignUpPassword.Text));
+                        }
+                        com.Parameters.AddWithValue("@name", TextBoxSignUpUsername.Text);
+                        comm.Parameters.AddWithValue("@user", TextBoxSignUpUsername.Text);
+                        conn.Open();
+                        int temp = Convert.ToInt32(comm.ExecuteScalar().ToString());
+                        //Her gjør den om dataen som sjekker navnet om til int.
+
+                        if (temp == 0) //Her sjekker den om verdien er 0 for å vite om den skal legge til navn og passord til databasen.
+                        {
+                            com.ExecuteNonQuery();
+                            conn.Close();
+                            Response.Redirect("LoginPage.aspx");
+                        }
+                        else
+                        {
+                            
+                            conn.Close();
+                        }
+                    }
+                }
             }
         }
 
