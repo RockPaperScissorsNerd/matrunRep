@@ -78,6 +78,24 @@ namespace MathiasOgRune
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl signupnorepeatentered;
 
         /// <summary>
+        /// userexists control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl userexists;
+
+        /// <summary>
+        /// UserExistsLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label UserExistsLabel;
+
+        /// <summary>
         /// ButtonSignUp control.
         /// </summary>
         /// <remarks>
