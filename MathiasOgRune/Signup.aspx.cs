@@ -81,7 +81,7 @@ namespace MathiasOgRune
                         }
                         else
                         {
-                            userexists.Visible = true;
+                            UserExists.Visible = true;
                             conn.Close();
                         }
                     }

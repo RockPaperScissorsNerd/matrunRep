@@ -11,6 +11,16 @@ namespace MathiasOgRune
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //test if user is loggedin, is there a session named "Username"?
+
+            if(Session["Username"] == null)
+            {
+                Response.Redirect("Default.aspx");
+                
+            }
+
+            string userName = (string)Session["Username"];
+
 
         }
     }

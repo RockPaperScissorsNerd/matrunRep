@@ -19,10 +19,14 @@ namespace MathiasOgRune
             nousernameentered.Visible = false;
             nopasswordentered.Visible = false;
             invalidLogin.Visible = false;
+
+            
         }
 
+       
+
         protected void ButtonLogin_Click(object sender, EventArgs e)
-        {
+        {           
             int auth = 0;
             if(TextBoxUsername.Text.Length < 1)
             {
@@ -35,10 +39,12 @@ namespace MathiasOgRune
                 auth = 1;
             }
 
-            if(auth == 0)
+            if (auth == 0)
             {
                 if (IsLoginTrue())
                 {
+                    //session create
+                    Session["Username"] = TextBoxUsername.Text;
                     Response.Redirect(Page.ResolveClientUrl("Homepage.aspx"));
                 }
                 else

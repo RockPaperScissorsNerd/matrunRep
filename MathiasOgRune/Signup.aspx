@@ -27,12 +27,12 @@
             <div id="signupnorepeatentered" class="error" visible="false" runat="server">
                 <span>Repeat password</span>
             </div>
-            <div id="userexists" runat="server" class="error" visible ="false">
-                <asp:Label ID="UserExistsLabel" runat="server" Text="This username is taken"></asp:Label>
+            <div id="UserExists" runat="server" class="error" visible ="false">
+                <span>This username is taken</span>
             </div>
             <br />
             <br />
-            <asp:Button ID="ButtonSignUp" runat="server" Text="Continu e" CssClass="butt" OnClick="ButtonSignUp_Click"/>
+            <asp:Button ID="ButtonSignUp" runat="server" Text="Continue" CssClass="butt" OnClick="ButtonSignUp_Click"/>
         </div>
         <a href="Default.aspx">Already have an account? Click here!</a>
     </form>

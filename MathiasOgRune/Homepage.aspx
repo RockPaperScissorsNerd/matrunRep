@@ -4,13 +4,20 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="LoggedinStyle.css" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <h2>You will be redirected here when login succeeded</h2>
-            <a href="Default.aspx">Back to login page</a>
+        <div id="navbar">
+            <a href="Homepage.aspx">
+                <span>Homepage</span>
+            </a>
+        </div>
+        <div class="gamediv">
+            <img src="media/rps.png" />
+            <br />
+            <span>Rock paper scissors</span>
         </div>
     </form>
 </body>
