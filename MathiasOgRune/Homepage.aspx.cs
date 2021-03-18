@@ -23,5 +23,11 @@ namespace MathiasOgRune
 
 
         }
+
+        protected void ImageButtonSignOut_Click(object sender, ImageClickEventArgs e)
+        {
+            Session["Username"] = null;
+            Response.Redirect("Default.aspx");
+        }
     }
 }

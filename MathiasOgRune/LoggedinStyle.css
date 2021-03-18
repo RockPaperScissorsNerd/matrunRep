@@ -1,14 +1,49 @@
 ﻿body{
     margin: 0px;
+    font-family: Verdana;
 }
 
 #navbar {
     background-color: cornflowerblue;
     padding: 10px;
-    width: 100%;
+}
+
+
+#gamecontainer {
+    padding: 10px;
+
+    margin: 20px;
+
+    height: 100%;
+
+    
 }
 
 .gamediv {
     border: 2px solid #73AD21;
-    width: 20%;
+    border-radius: 10px;
+    width: 350px;
+
+}
+
+#homepageLink{
+    font-size: 40px;
+    color: black;
+    padding: 20px;
+}
+
+#ImageButtonSignOut{
+    text-align: right;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+
 }
