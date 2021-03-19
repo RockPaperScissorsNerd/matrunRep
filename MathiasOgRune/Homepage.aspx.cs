@@ -15,7 +15,7 @@ namespace MathiasOgRune
 
             if(Session["Username"] == null)
             {
-                Response.Redirect("Default.aspx");
+            Response.Redirect("Default.aspx");
                 
             }
 
@@ -24,10 +24,12 @@ namespace MathiasOgRune
 
         }
 
-        protected void ImageButtonSignOut_Click(object sender, ImageClickEventArgs e)
+        protected void ButtonSignOut_Click(object sender, EventArgs e)
         {
             Session["Username"] = null;
             Response.Redirect("Default.aspx");
+
+            Response.Write("geh");
         }
     }
 }

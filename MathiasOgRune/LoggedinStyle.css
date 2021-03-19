@@ -27,14 +27,15 @@
 }
 
 #homepageLink{
-    font-size: 30px;
+    font-size: 50px;
     color: black;
     padding: 20px;
+
 }
 
-#ImageButtonSignOut{
-    text-align: right;
+#ButtonSignOut{
     padding: 20px;
+    text-align: right;
 }
 
 a{
