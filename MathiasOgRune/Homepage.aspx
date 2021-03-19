@@ -11,22 +11,31 @@
 <body>
     <form id="form1" runat="server">
         <div id="navbar">
-            <a id="homepageLink" href="Homepage.aspx">
-                <i class="fa fa-home"></i>
-            </a>
-            <asp:ImageButton ID="ImageButtonSignOut" runat="server" CssClass="fa fa-sign-out" OnClick="ImageButtonSignOut_Click" />
+            <ul style="display: inline-flex;">
+                <a id="homepageLink" href="Homepage.aspx">
+                    <i class="fa fa-home"></i>
+                </a>
+
+                <div id="signout">
+                    <asp:ImageButton src="media/signout.jpg" ID="ImageButtonSignOut" runat="server" OnClick="ImageButtonSignOut_Click"/>
+                </div>
+            </ul>
         </div>
         <div id="gamecontainer">
-            <div class="gamediv">
-                <img src="media/rps.png" />
-                <br />
-                <span>Rock paper scissors</span>
-            </div>
-            <div class="gamediv">
-                <img />
-                <br />
-                <span>geh</span>
-            </div>
+            <table>
+                <tr>
+                    <img src="media/rps.png" />
+                    <span>Rock Paper Scissors</span>
+                </tr>
+                <tr>
+                    <img src="media/rps.png" />
+                    <span>Rock Paper Scissors</span>
+                </tr>
+                <tr>
+                    <img src="media/rps.png" />
+                    <span>Rock Paper Scissors</span>
+                </tr>
+            </table>
         </div>
     </form>
 </body>
