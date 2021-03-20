@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace MathiasOgRune
 {
-    public partial class Homepage : System.Web.UI.Page
+    public partial class RPS : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,7 +16,7 @@ namespace MathiasOgRune
             //if(Session["Username"] == null)
             //{
             //Response.Redirect("Default.aspx");
-                
+
             //}
 
             //string userName = (string)Session["Username"];

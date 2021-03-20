@@ -1,25 +1,12 @@
-﻿body{
+﻿body {
     margin: 0px;
-    font-family: Verdana;
+    padding: 0px;
     background-image: url(media/wallpaper.png);
 }
 
 #navbar {
     background-color: cornflowerblue;
     padding: 10px;
-}
-
-#gamelist {
-    border: 2px solid #aaa;
-    border-radius: 25px;
-    background-color: #eee;
-}
-
-.gamelink {
-    width: 28%;
-    border-radius: 15px;
-    border: 3px solid #73AD21;
-    margin: 30px 20px 30px 30px;
 }
 
 #homepageLink {
@@ -35,8 +22,6 @@
     text-align: right;
     text-decoration: none;
     color: black;
-    
-    
     position: absolute;
     top: 5%;
     left: 90%;
@@ -44,10 +29,9 @@
     transform: translate(-50%, -50%);
 }
 
-img{
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-
+#gamecontainer {
+    border-radius: 25px;
+    border: 4px solid #73AD21;
+    margin: 20px;
+    background-color: #eee;
 }
-

@@ -14,23 +14,32 @@
             <a id="homepageLink" href="Homepage.aspx">
                 <i class="fa fa-home"></i>
             </a>
-
-            <asp:Button ID="ButtonSignOut" CssClass="fa fa-sign-out" runat="server" Text="Sign Out" OnClick="ButtonSignOut_Click" />
+            <asp:LinkButton ID="signout" runat="server" OnClick="LinkButtonSignOut_Click">
+                <i class="fa fa-sign-out">
+                    <span style="font-size: 20px; font-family: Verdana;">Sign Out</span>
+                </i>
+            </asp:LinkButton>
         </div>
-        <table>
-            <tr>
+
+        <div id="gamelist" style="margin: 30px;">
+            <div class="gamelink" style="width: 20%;">
                 <img src="media/rps.png" />
+                <br />
                 <span>Rock Paper Scissors</span>
-            </tr>
-            <tr>
+            </div>
+
+            <div class="gamelink">
                 <img src="media/rps.png" />
-                <span>Rock Paper Scissors</span>
-            </tr>
-            <tr>
+                <br />
+                <span>Snake</span>
+            </div>
+
+            <div class="gamelink">
                 <img src="media/rps.png" />
-                <span>Rock Paper Scissors</span>
-            </tr>
-         </table>
+                <br />
+                <span>Tic Tac Toe</span>
+            </div>
+        </div>
     </form>
 </body>
 </html>

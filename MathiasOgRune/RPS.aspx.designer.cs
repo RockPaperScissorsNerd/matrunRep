@@ -11,7 +11,7 @@ namespace MathiasOgRune
 {
 
 
-    public partial class Homepage
+    public partial class RPS
     {
 
         /// <summary>
