@@ -21,7 +21,21 @@
                 </asp:LinkButton>
             </div>
         <div id="gamecontainer">
-            <img style="height: 400px; width: 400px;" src="media/rps.png"/>
+            <%--<img style="height: 400px; width: 400px;" src="media/rps.png"/>--%>
+
+            <p>
+                <asp:Label ID="GameTitle" runat="server" Text="Rock, Paper &amp; Scissors"></asp:Label>
+            </p>
+            <p>
+                <asp:Label ID="RPSPicked" runat="server" Text="You picked: "></asp:Label>
+            </p>
+
+            <asp:ImageButton ID="Rock" runat="server" ImageUrl="~/RPS images/Rock.png" OnClick="RPSPick" />
+            <asp:ImageButton ID="Paper" runat="server" ImageUrl="~/RPS images/Paper.png" style="margin-left: 22px" Width="187px" OnClick="RPSPick" />
+            <asp:ImageButton ID="Scissors" runat="server" ImageUrl="~/RPS images/Scissors.png" style="margin-left: 36px" Width="126px" OnClick="RPSPick" />
+            <br />
+            
+
         </div>
     </form>
 </body>
