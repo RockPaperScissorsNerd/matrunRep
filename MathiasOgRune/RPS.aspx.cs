@@ -32,9 +32,9 @@ namespace MathiasOgRune
 
         protected void RPSPick(object sender, EventArgs e)
         {
-            Button RPS = (Button)sender;
+            ImageButton RPS = sender as ImageButton;
             int BotRPS = RandomRPS();
-            RPSPicked.Text = "You picked: " + RPS.ID;
+            RPSPicked.Text = "";
             if (RPS.ID == "Rock")
             {
                 if (BotRPS == 1)
@@ -98,7 +98,7 @@ namespace MathiasOgRune
             Default prog = new Default();
             lock (syncLock)
             {
-                int randomNum = random.Next(1, 3);
+                int randomNum = random.Next(1, 4);
                 return randomNum;
             }
         }
