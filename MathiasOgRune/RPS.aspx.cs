@@ -35,22 +35,36 @@ namespace MathiasOgRune
             ImageButton RPS = sender as ImageButton;
             int BotRPS = RandomRPS();
             RPSPicked.Text = "";
+            Rock.BorderStyle = BorderStyle.None;
+            Paper.BorderStyle = BorderStyle.None;
+            Scissors.BorderStyle = BorderStyle.None;
+            RPS.BorderStyle = BorderStyle.Groove;
+            BotRock.BorderStyle = BorderStyle.None;
+            BotPaper.BorderStyle = BorderStyle.None;
+            BotScissors.BorderStyle = BorderStyle.None;
+            RPSPicked.Text = "You picked: " + RPS.ID + ".";
             if (RPS.ID == "Rock")
-            {
+            {  
                 if (BotRPS == 1)
                 {
                     //STALEMATE (ROCK VS ROCK)
-                    RPSPicked.Text = "You picked: " + RPS.ID + " and the bot picked Rock. STALEMATE!";
+                    BotPicked.Text = "Bot picked: Rock.";
+                    GameResults.Text = "STALEMATE!";
+                    BotRock.BorderStyle = BorderStyle.Groove;
                 }
                 else if (BotRPS == 2)
                 {
                     //BOT WINS (ROCK VS PAPER)
-                    RPSPicked.Text = "You picked: " + RPS.ID + " and the bot picked Paper. BOT WINS!";
+                    BotPicked.Text = "Bot picked: Paper.";
+                    GameResults.Text = "BOT WINS!";
+                    BotPaper.BorderStyle = BorderStyle.Groove;
                 }
                 else if (BotRPS == 3)
                 {
                     //PLAYER WINS (ROCK VS SCISSORS)
-                    RPSPicked.Text = "You picked: " + RPS.ID + " and the bot picked Scissors. YOU WIN!";
+                    BotPicked.Text = "Bot picked: Scissors.";
+                    GameResults.Text = "YOU WIN!";
+                    BotScissors.BorderStyle = BorderStyle.Groove;
                 }
             }
             else if (RPS.ID == "Paper")
@@ -58,17 +72,23 @@ namespace MathiasOgRune
                 if (BotRPS == 1)
                 {
                     //PLAYER WINS (PAPER VS ROCK)
-                    RPSPicked.Text = "You picked: " + RPS.ID + " and the bot picked Rock. YOU WIN!";
+                    BotPicked.Text = "Bot picked: Rock.";
+                    GameResults.Text = "YOU WIN!";
+                    BotRock.BorderStyle = BorderStyle.Groove;
                 }
                 else if (BotRPS == 2)
                 {
                     //STALEMATE (PAPER VS PAPER)
-                    RPSPicked.Text = "You picked: " + RPS.ID + " and the bot picked Paper. STALEMATE!";
+                    BotPicked.Text = "Bot picked: Paper.";
+                    GameResults.Text = "STALEMATE!";
+                    BotPaper.BorderStyle = BorderStyle.Groove;
                 }
                 else if (BotRPS == 3)
                 {
                     //BOT WINS (PAPER VS SCISSORS)
-                    RPSPicked.Text = "You picked: " + RPS.ID + " and the bot picked Scissors. BOT WINS!";
+                    BotPicked.Text = "Bot picked: Scissors.";
+                    GameResults.Text = "BOT WINS!";
+                    BotScissors.BorderStyle = BorderStyle.Groove;
                 }
             }
             else if (RPS.ID == "Scissors")
@@ -76,17 +96,23 @@ namespace MathiasOgRune
                 if (BotRPS == 1)
                 {
                     //BOT WINS (SCISSORS VS ROCK)
-                    RPSPicked.Text = "You picked: " + RPS.ID + " and the bot picked Rock. BOT WINS!";
+                    BotPicked.Text = "Bot picked: Rock.";
+                    GameResults.Text = "BOT WINS!";
+                    BotRock.BorderStyle = BorderStyle.Groove;
                 }
                 else if (BotRPS == 2)
                 {
                     //PLAYER WINS (SCISSORS VS PAPER)
-                    RPSPicked.Text = "You picked: " + RPS.ID + " and the bot picked Paper. YOU WIN!";
+                    BotPicked.Text = "Bot picked: Paper.";
+                    GameResults.Text = "YOU WIN!";
+                    BotPaper.BorderStyle = BorderStyle.Groove;
                 }
                 else if (BotRPS == 3)
                 {
                     //STALEMATE (SCISSORS VS SCISSORS)
-                    RPSPicked.Text = "You picked: " + RPS.ID + " and the bot picked Scissors. STALEMATE!";
+                    BotPicked.Text = "Bot picked: Scissors.";
+                    GameResults.Text = "STALEMATE!";
+                    BotScissors.BorderStyle = BorderStyle.Groove;
                 }
             }
         }
@@ -95,7 +121,7 @@ namespace MathiasOgRune
         private static readonly object syncLock = new object();
         public static int RandomRPS()
         {
-            Default prog = new Default();
+            //Default prog = new Default();
             lock (syncLock)
             {
                 int randomNum = random.Next(1, 4);
